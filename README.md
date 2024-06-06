@@ -1,0 +1,1 @@
+# fairlauncher.fun
