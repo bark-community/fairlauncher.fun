@@ -1,6 +1,6 @@
 # BARK | FairLauncher.fun: Monorepo
 
-Welcome to the official monorepo for FairLauncher.fun, encompassing the website, API, application, and documentation.
+Welcome to the official monorepo for FairLauncher.fun project, encompassing the website, API, application, and documentation.
 
 ## FairLauncher.fun
 
@@ -147,7 +147,7 @@ https://api.fairlauncher.fun/api/v1
   }
   ```
 
-## Improvements and Features
+## Features:
 
 1. **Enhanced Security Measures:**
    - **Encryption:** Ensuring all data at rest and in transit is encrypted.
