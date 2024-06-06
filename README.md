@@ -4,7 +4,7 @@ Welcome to the official monorepo for FairLauncher.fun project, encompassing the 
 
 ## FairLauncher.fun
 
-FairLauncher.fun is a platform designed to provide a fair and transparent launch mechanism for amti-bot memecoins (Token-2022) on the Solana blockchain. The BARK Protocol´s FairLauncher DApp introduces a groundbreaking decentralized application (DApp) on the Solana blockchain, aiming to redefine the token launch landscape with fairness, transparency, and security at its core. This project addresses critical industry challenges, such as rug pulls, bot manipulation, scalability constraints, and regulatory compliance, through innovative technology and community-driven governance.
+FairLauncher.fun is a platform designed to provide a fair and transparent launch mechanism for anti-bot and better bot resistance memecoins (Token-2022) on the Solana blockchain. The BARK Protocol´s FairLauncher DApp introduces a groundbreaking decentralized application (DApp) on the Solana blockchain, aiming to redefine the token launch landscape with fairness, transparency, and security at its core. This project addresses critical industry challenges, such as rug pulls, bot manipulation, scalability constraints, and regulatory compliance, through innovative technology and community-driven governance.
 
 At its essence, the FairLauncher DApp harnesses Solana blockchain technology and smart contracts to automate and streamline token launches, eliminating intermediaries and minimizing the risk of fraudulent activities. By incorporating sophisticated anti-bot mechanisms and dynamic transaction controls, the platform creates an equitable environment for all participants, reducing the impact of market manipulation and upholding market integrity.
 
