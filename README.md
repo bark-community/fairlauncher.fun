@@ -229,11 +229,52 @@ https://api.fairlauncher.fun/api/v1
 - **HandleError(errorMessage)**
 - **GenerateResponse(success, message, data)**
 
+### Structure
+
+The scaffold project structure may vary based on the front end framework being utilized. The below is an example structure for the Next js Scaffold.
+ 
+```
+├── public : publically hosted files
+├── src : primary code folders and files 
+│   ├── components : should house anything considered a resuable UI component
+│   ├── contexts` : any context considered reusable and useuful to many compoennts that can be passed down through a component tree
+│   ├── hooks` : any functions that let you 'hook' into react state or lifecycle features from function components
+│   ├── models` : any data structure that may be reused throughout the project
+│   ├── pages` : the pages that host meta data and the intended `View` for the page
+│   ├── stores` : stores used in state management
+│   ├── styles` : contain any global and reusable styles
+│   ├── utils` : any other functionality considered reusable code that can be referenced
+│   ├── views` : contains the actual views of the project that include the main content and components within
+style, package, configuration, and other project files
+
+```
+
 ## Getting Started
 
 To get started with FairLauncher.fun, please refer to our [API Documentation](https://api.fairlauncher.fun/docs) for detailed guides and examples.
 
 For any issues or contributions, please open a GitHub issue or submit a pull request. Join our community on [Discord](https://discord.gg/XXXX) for discussions and updates.
+
+### Committing
+
+To choose a task or make your own, do the following:
+
+1. [Add an issue](https://github.com/bark-community/fairlauncher/issues/new) for the task and assign it to yourself or comment on the issue
+2. Make a draft PR referencing the issue.
+
+The general flow for making a contribution:
+
+1. Fork the repo on GitHub
+2. Clone the project to your own machine
+3. Commit changes to your own branch
+4. Push your work back up to your fork
+5. Submit a Pull request so that we can review your changes
+
+**NOTE**: Be sure to merge the latest from "upstream" before making a 
+pull request!
+
+You can find tasks on the [project board](https://github.com/bark-community/fairlauncher/projects/1) 
+or create an issue and assign it to yourself.
 
 ## License
 

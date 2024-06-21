@@ -1,0 +1,48 @@
+{
+  "name": "fairlauncher.fun",
+  "version": "1.0.0-Alpha",
+  "description": "FairLauncher.fun is a platform designed to provide a fair and transparent launch mechanism for anti-bot and better bot resistance memecoins (Token-2022) on the Solana blockchain.",
+  "author": "BARK Protocol",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.1.4",
+    "@noble/ed25519": "^2.1.0",
+    "@solana/spl-token": "^0.4.6",
+    "@solana/spl-token-metadata": "^0.1.4",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.93.0",
+    "@tailwindcss/typography": "^0.5.13",
+    "daisyui": "^4.12.2",
+    "date-fns": "^2.30.0",
+    "immer": "^9.0.21",
+    "next": "^14.2.4",
+    "next-compose-plugins": "^2.2.1",
+    "next-transpile-modules": "^10.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.7",
+    "@types/react": "^18.3.3",
+    "autoprefixer": "^10.4.19",
+    "eslint": "8.7.0",
+    "eslint-config-next": "^14.2.4",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
