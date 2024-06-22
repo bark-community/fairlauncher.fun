@@ -1,19 +1,20 @@
-"use client";
+'use client';
 
 import React from 'react';
+import MintFeatures from '@/components/mint/mint-features';
+import FeatureCards from '@/components/fairlauncher.fun/fairlauncher.fun-features';
 
-interface FeatureProps {
-  title: string;
-  description: string;
-}
-
-const FeatureCard: React.FC<FeatureProps> = ({ title, description }) => {
+const FeaturesPage: React.FC = () => {
   return (
-    <div className="p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-      <h3 className="text-xl font-bold mb-4">{title}</h3>
-      <p className="text-gray-700">{description}</p>
+    <div className="container mx-auto py-16 px-6">
+      <h1 className="text-4xl font-bold text-center mb-8 font-poppins text-custom-orange">Features</h1>
+      <p className="text-lg text-gray-500 mb-12 font-poppins text-center">
+        Creating, Minting and Trading secured NFTs and memecoins with an easy way.
+      </p>
+      <MintFeatures />
+      <FeatureCards />
     </div>
   );
 };
 
-export default FeatureCard;
+export default FeaturesPage;

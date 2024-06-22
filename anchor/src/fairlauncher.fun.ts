@@ -1,16 +1,16 @@
 // Here we export some useful types and functions for interacting with the Anchor program.
 import { AnchorProvider, Program } from '@coral-xyz/anchor';
 import { PublicKey } from '@solana/web3.js';
-import type { Basic } from '../target/types/fairlauncher.fun';
-import { IDL as BasicIDL } from '../target/types/fairlauncher.fun';
+import type { FairLauncher } from '../target/types/fairlauncher.fun';
+import { IDL as FairLauncherIDL } from '../target/types/fairlauncher.fun';
 
 // Re-export the generated IDL and type
-export { Basic, BasicIDL };
+export { FairLauncher, FairLauncherIDL };
 
 // The programId is imported from the program IDL.
-export const BASIC_PROGRAM_ID = new PublicKey(BasicIDL.address);
+export const FAIRLAUNCHER_PROGRAM_ID = new PublicKey(FairLauncherIDL.metadata.address);
 
-// This is a helper function to get the Basic Anchor program.
-export function getBasicProgram(provider: AnchorProvider) {
-  return new Program(BasicIDL as Basic, provider);
+// This is a helper function to get the FairLauncher Anchor program.
+export function getFairLauncherProgram(provider: AnchorProvider) {
+  return new Program<FairLauncher>(FairLauncherIDL, FAIRLAUNCHER_PROGRAM_ID, provider);
 }

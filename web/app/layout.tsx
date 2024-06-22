@@ -1,20 +1,19 @@
+import './global.css';
 import { UiLayout } from '@/components/ui/ui-layout';
 import { ClusterProvider } from '@/components/cluster/cluster-data-access';
 import { SolanaProvider } from '@/components/solana/solana-provider';
 import { ReactQueryProvider } from './react-query-provider';
-import './global.css';
 
 export const metadata = {
-  title: 'FairLauncher.fun | BARK Protocol',
-  description: 'FairLauncher.fun is designed to address critical industry challenges such as rug pulls, bot manipulation, scalability constraints, and regulatory compliance',
+  title: 'FairLauncher.fun',
+  description: 'A decentralized application for launching and trading memecoins.',
 };
 
 const links: { label: string; path: string }[] = [
   { label: 'Account', path: '/account' },
-  { label: 'Features', path: '/features' },
-  { label: 'Mint', path: '/mint' },
+  { label: 'Launchpad', path: '/launchpad' },
+  { label: 'Trading', path: '/trading' },
   { label: 'Clusters', path: '/clusters' },
-  { label: 'FAQ', path: '/faq' },
 ];
 
 export default function RootLayout({

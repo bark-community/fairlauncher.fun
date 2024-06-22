@@ -1,161 +1,113 @@
-# FairLauncher.fun | BARK Protocol
+# FairLauncher.fun Contribution Guide
 
-Welcome to the official repository for FairLauncher.fun, the decentralized application (DApp) for launching memecoins with enhanced anti-bot mechanisms on the Solana blockchain. This project is part of the BARK Protocol, which aims to provide a fair, transparent, and secure token launch platform.
+Welcome to FairLauncher.fun! This document provides an overview of the project and how you can contribute. FairLauncher.fun focuses on creating a fair and transparent launch mechanism for anti-bot, Solana, token-2022 based memecoins on the Solana blockchain. Your skills are highly valuable in driving this project forward.
 
-## Overview
+## Project Description
 
-FairLauncher.fun is bootstrapped with BarkBOT and designed to address critical industry challenges such as rug pulls, bot manipulation, scalability constraints, and regulatory compliance. The platform leverages the power of Solana's blockchain technology to offer a seamless and secure memecoin launch experience, ensuring fairness and transparency for all participants.
+**FairLauncher.fun**: This project features advanced anti-bot measures and a community governance framework, ensuring a fair and transparent launch mechanism for memecoins on the Solana blockchain.
 
-* Project moved folder fairlauncher. Bootstapped Solana Scaffold, Next.js
+**Contribute**: You can help by working on the dApp's UI, backend integration, or smart contracts.
 
-cd ./fairlauncher && pnmp install
+**Repository**: [FairLauncher.fun](https://github.com/bark-community/fairlauncher.fun)
 
-### Key Features
+## Prerequisites
 
-- **Enhanced Security**: Robust anti-bot mechanisms and dynamic transaction controls.
-- **User Experience**: Intuitive interface with personalized dashboards and customizable settings.
-- **Scalability**: Built on the Solana blockchain, ensuring fast and low-cost transactions.
+- Node v18.18.0 or higher
+- Rust v1.77.2 or higher
+- Anchor CLI 0.30.0 or higher
+- Solana CLI 1.18.16 or higher
+
+## Installation
+
+### Clone the repo
+
+```shell
+git clone https://github.com/bark-community/fairlauncher.fun
+cd fairlauncher.fun
+```
+
+### Install Dependencies
+
+```shell
+pnpm install
+```
+
+### Start the web app
+
+```shell
+pnpm run dev
+```
+
+## dApps
+
+### Anchor
+
+This is a Solana program written in Rust using the Anchor framework.
+
+#### Commands
+
+You can use any normal anchor commands. Either move to the `anchor` directory and run the `anchor` command or prefix the command with `pnpm run`, e.g., `pnpm run anchor`.
+
+#### Sync the program id:
+
+Running this command will create a new keypair in the `anchor/target/deploy` directory and save the address to the Anchor config file and update the `declare_id!` macro in the `./src/lib.rs` file of the program.
+
+You will manually need to update the constant in `anchor/lib/fairlauncher.fun.ts` to match the new program id.
+
+```shell
+pnpm run anchor keys sync
+```
+
+#### Build the program:
+
+```shell
+pnpm run anchor-build
+```
+
+#### Start the test validator with the program deployed:
+
+```shell
+npm run anchor-localnet
+```
+
+#### Run the tests
+
+```shell
+pnpm run anchor-test
+```
+
+#### Deploy to Devnet
+
+```shell
+pnpm run anchor deploy --provider.cluster devnet
+```
+
+### FairLauncher web
+
+This is a Next.js, React app that uses the Anchor generated client to interact with the Solana program.
+
+#### Commands
+
+Start the web app
+
+```shell
+pnpm run dev
+```
+
+Build the web app
+
+```shell
+pnpm run build
+```
+
+## Creating a New Repository
+
+If you have innovative ideas or enhancements that do not fit into the existing repositories, we need to create a new repository under the BARK community. This will help expand the ecosystem and drive further innovation.
 
 ## Getting Started
 
-### Prerequisites
+Your involvement can help drive this project forward, ensuring the success and growth of FairLauncher.fun. For more detailed information and to get started, visit the [GitHub repository](https://github.com/bark-community/fairlauncher.fun). Your contributions, whether in UI/UX design, backend development, smart contract optimization, or community engagement, will be highly appreciated.
 
-- Node.js (version 18 or later)
-- Yarn or npm
-- Rust and Solana CLI tools
+Let's build a robust and innovative FairLauncher.fun together!
 
-### Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/bark-community/fairlauncher.fun.git
-    cd fairlauncher.fun
-    ```
-
-2. Install dependencies:
-
-    ```bash
-    yarn install
-    # or
-    npm install
-    ```
-
-3. Set up the environment variables:
-
-    Create a `.env` file in the root directory and add the necessary configuration. Refer to the `.env.example` file for required variables.
-
-### Running the Application
-
-1. **Start the development server**:
-
-    ```bash
-    yarn dev
-    # or
-    npm run dev
-    ```
-
-    This will start the Next.js development server. You can access the application at `http://localhost:3000`.
-
-### Building for Production
-
-To build the project for production, run:
-
-```bash
-yarn build
-# or
-npm run build
-```
-
-This will create an optimized build of the application in the `.next` directory.
-
-## Project Structure
-
-```
-├── public            # Publicly hosted files
-├── src               # Primary code folders and files
-│   ├── components    # Reusable UI components
-│   ├── contexts      # Context providers for state management
-│   ├── hooks         # Custom React hooks
-│   ├── models        # Data models and types
-│   ├── pages         # Next.js pages
-│   ├── stores        # Zustand stores for state management
-│   ├── styles        # Global and reusable styles
-│   ├── utils         # Utility functions and helpers
-│   ├── views         # Main content views
-├── .env.example      # Example environment variables file
-├── .gitignore        # Git ignore file
-├── next.config.js    # Next.js configuration
-├── tailwind.config.js# Tailwind CSS configuration
-├── tsconfig.json     # TypeScript configuration
-├── package.json      # Project dependencies and scripts
-└── README.md         # Project documentation
-```
-
-## API Documentation
-
-Our API allows developers to integrate with FairLauncher.fun, enabling seamless token launch processes, user deposits, and more. For detailed API documentation, please refer to our [API Docs](https://api.fairlauncher.fun/docs).
-
-### Base URL
-
-```text
-https://api.fairlauncher.fun/api/v1
-```
-
-### Endpoints
-
-- **Token Launch**
-- **Token Details**
-- **User Deposit**
-- **Launch Status**
-- **Token Burn**
-- **Admin Controls**
-
-## Contributing
-
-We welcome contributions from the community! To contribute, please follow these steps:
-
-1. **Fork the repository**:
-
-    ```bash
-    git clone https://github.com/bark-community/fairlauncher.fun.git
-    cd fairlauncher.fun
-    ```
-
-2. **Create a new branch**:
-
-    ```bash
-    git checkout -b feature/your-feature-name
-    ```
-
-3. **Make your changes**.
-
-4. **Commit your changes**:
-
-    ```bash
-    git commit -m "Add your commit message"
-    ```
-
-5. **Push to your branch**:
-
-    ```bash
-    git push origin feature/your-feature-name
-    ```
-
-6. **Create a Pull Request**.
-
-### Code of Conduct
-
-Please adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) when contributing to this project.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
-
-## Community
-
-Join our community on [Discord](https://t.me/bark_protocol for discussions and updates.
-
----
-
-Thank you for your interest in FairLauncher.fun. We look forward to your contributions and feedback!
+For any questions or further information, please reach out to the project maintainers through the GitHub repository.
